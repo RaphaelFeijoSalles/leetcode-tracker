@@ -1,0 +1,130 @@
+:root{
+  --max-width: 1100px;
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent1: #4f46e5;
+  --accent2: #06b6d4;
+  --shadow: 0 6px 18px rgba(15,23,42,0.06);
+  --radius: 12px;
+  --gap: 16px;
+  --pad: 18px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* central container */
+.app-container{
+  display:flex;
+  justify-content:center;
+  padding:32px 20px;
+}
+
+/* max width, centralizado */
+.checklist-root{
+  width:100%;
+  max-width:var(--max-width);
+}
+
+/* header */
+.checklist-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:18px;
+}
+.title{font-size:20px;margin:0}
+.meta{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* header controls */
+.header-controls{display:flex;align-items:center;gap:12px}
+.progress-bar{
+  width:260px;
+  height:12px;
+  background:#eef2ff;
+  border-radius:999px;
+  overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  width:0%;
+  transition: width .28s ease;
+}
+
+/* reset button */
+.btn-reset{
+  padding:9px 12px;
+  border-radius:10px;
+  border:0;
+  background:#111827;
+  color:#fff;
+  cursor:pointer;
+  font-size:13px;
+}
+
+/* weeks grid -> cards that will arrange side-by-side if there's space */
+.weeks-wrapper{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:var(--gap);
+}
+
+/* card */
+.week-card{
+  background:var(--card);
+  padding:var(--pad);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* inside each card: grid of items */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:10px;
+}
+
+/* each item */
+.grid-item{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #f0f3ff;
+  background:#fff;
+  cursor:pointer;
+}
+.grid-item input{margin-top:4px}
+.item-label{
+  font-size:14px;
+  line-height:1.25;
+  color:#0f172a;
+}
+
+/* responsive tweaks */
+@media (max-width:720px){
+  .progress-bar{width:160px}
+  .weeks-wrapper{grid-template-columns: 1fr}
+  .grid{grid-template-columns: repeat(2, 1fr)}
+}
+@media (max-width:440px){
+  .grid{grid-template-columns: 1fr}
+  .title{font-size:18px}
+  .btn-reset{padding:8px}
+}
