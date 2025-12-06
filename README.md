@@ -1,115 +1,57 @@
-# Meu Checklist Semanal
+# 🚀 LeetCode Tracker
 
-Uma aplicação simples e funcional de checklist semanal feita com **React + TypeScript + Vite**, ideal para organização pessoal e acompanhamento de rotina. As tarefas marcadas ficam salvas no navegador usando **localStorage**, garantindo que tudo permaneça mesmo após recarregar a página.
+Um checklist interativo e moderno para acompanhar o progresso de estudos em algoritmos e estruturas de dados (focado no Blind 75 / NeetCode 150).
 
-Este projeto foi criado como parte do meu portfólio e está hospedado no **GitHub Pages**.
+![Status do Projeto](https://img.shields.io/badge/Status-Concluído-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
----
+## ✨ Funcionalidades
 
-## 🚀 Tecnologias Utilizadas
+- **Acompanhamento Visual:** Barra de progresso dinâmica baseada na conclusão das tarefas.
+- **Persistência de Dados:** O progresso é salvo automaticamente no navegador (`localStorage`) usando Hooks personalizados.
+- **Dark/Light Mode:** Tema alternável com detecção automática da preferência do sistema.
+- **Organização Semanal:** Conteúdo dividido por tópicos e semanas (Arrays, Two Pointers, Graphs, etc.).
+- **Interface Responsiva:** Design fluido que funciona em Desktop e Mobile.
+- **UX Aprimorada:** Modal de confirmação personalizado para ações destrutivas (Reset).
 
-* **React**
-* **TypeScript**
-* **Vite**
-* **CSS puro**
-* LocalStorage para persistência
+## 🛠️ Tecnologias Utilizadas
 
----
+Este projeto foi refatorado de HTML/JS puro para uma arquitetura moderna baseada em componentes:
 
-## 📌 Funcionalidades
+- **Core:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilização:** CSS3 Moderno (CSS Variables para temas)
+- **Deploy:** GitHub Pages (via GitHub Actions)
 
-* Checklist dividido por semanas
-* Salvamento automático no navegador (localStorage)
-* Layout responsivo
-* Cards organizados e centralizados em telas grandes
-* Botão para resetar tudo
+## 📂 Arquitetura do Projeto
 
----
+A estrutura de arquivos foi organizada para garantir escalabilidade e fácil manutenção:
 
-## 🖥️ Como rodar localmente
+src/ ├── components/ # Componentes visuais (Checklist, Footer) ├── data/ # Separação dos dados (questões/semanas) da lógica visual ├── hooks/ # Custom Hooks (ex: useStickyState para persistência) ├── App.tsx # Orquestrador de layout e temas └── index.css # Variáveis globais e estilos responsivos
 
-```bash
-git clone https://github.com/SEU_USUARIO/meu-checklist.git
+
+## 🚀 Como executar localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/RaphaelFeijoSalles/meu-checklist.git](https://github.com/RaphaelFeijoSalles/meu-checklist.git)
+Instale as dependências:
+
+Bash
+
 cd meu-checklist
 npm install
+Inicie o servidor de desenvolvimento:
+
+Bash
+
 npm run dev
-```
+📦 Deploy (GitHub Pages)
+O projeto está configurado para deploy automatizado via GitHub Actions.
 
-A aplicação rodará em: `http://localhost:5173/`
+Certifique-se de que a propriedade base no vite.config.ts corresponde ao nome do repositório.
 
----
+O workflow de build é acionado a cada push na branch principal.
 
-## 🛠️ Como fazer build (produção)
-
-```bash
-npm run build
-npm run preview
-```
-
----
-
-## 🌐 Deploy no GitHub Pages
-
-Este projeto pode ser facilmente hospedado no GitHub Pages usando o plugin do Vite:
-
-1. Instalar plugin:
-
-```bash
-npm install gh-pages -D
-```
-
-2. Adicionar no `vite.config.ts`:
-
-```ts
-export default defineConfig({
-  base: '/meu-checklist/',
-});
-```
-
-3. Editar `package.json`:
-
-```json
-"scripts": {
-  "deploy": "gh-pages -d dist",
-  "build": "vite build"
-}
-```
-
-4. Gerar build e enviar:
-
-```bash
-npm run build
-npm run deploy
-```
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-meu-checklist/
-│
-├── src/
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── styles.css
-│
-├── index.html
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
-```
-
----
-
-## 📄 Licença
-
-Este projeto é de uso livre para estudos e portfólio.
-
----
-
-## 👤 Autor
-
-Feito por **Raphael Salles**, 2025.
-
-Se quiser melhorar, personalizar ou expandir, fique à vontade!
+📝 Autor
+Desenvolvido por Raphael Salles.
