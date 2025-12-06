@@ -1,75 +1,92 @@
-Meu Checklist Semanal
+# Meu Checklist Semanal
 
-Uma aplicação simples e funcional de checklist semanal feita com React + TypeScript + Vite, ideal para organização pessoal e acompanhamento de rotina. As tarefas marcadas ficam salvas no navegador usando localStorage, garantindo que tudo permaneça mesmo após recarregar a página.
+Uma aplicação simples e funcional de checklist semanal feita com **React + TypeScript + Vite**, ideal para organização pessoal e acompanhamento de rotina. As tarefas marcadas ficam salvas no navegador usando **localStorage**, garantindo que tudo permaneça mesmo após recarregar a página.
 
-Este projeto foi criado como parte do meu portfólio e está hospedado no GitHub Pages.
+Este projeto foi criado como parte do meu portfólio e está hospedado no **GitHub Pages**.
 
-🚀 Tecnologias Utilizadas
+---
 
-React
+## 🚀 Tecnologias Utilizadas
 
-TypeScript
+* **React**
+* **TypeScript**
+* **Vite**
+* **CSS puro**
+* LocalStorage para persistência
 
-Vite
+---
 
-CSS puro
+## 📌 Funcionalidades
 
-LocalStorage para persistência
+* Checklist dividido por semanas
+* Salvamento automático no navegador (localStorage)
+* Layout responsivo
+* Cards organizados e centralizados em telas grandes
+* Botão para resetar tudo
 
-📌 Funcionalidades
+---
 
-Checklist dividido por semanas
+## 🖥️ Como rodar localmente
 
-Salvamento automático no navegador (localStorage)
-
-Layout responsivo
-
-Cards organizados e centralizados em telas grandes
-
-Botão para resetar tudo
-
-🖥️ Como rodar localmente
-
+```bash
 git clone https://github.com/SEU_USUARIO/meu-checklist.git
 cd meu-checklist
 npm install
 npm run dev
+```
 
-A aplicação rodará em: http://localhost:5173/
+A aplicação rodará em: `http://localhost:5173/`
 
-🛠️ Como fazer build (produção)
+---
 
+## 🛠️ Como fazer build (produção)
+
+```bash
 npm run build
 npm run preview
+```
 
-🌐 Deploy no GitHub Pages
+---
+
+## 🌐 Deploy no GitHub Pages
 
 Este projeto pode ser facilmente hospedado no GitHub Pages usando o plugin do Vite:
 
-Instalar plugin:
+1. Instalar plugin:
 
+```bash
 npm install gh-pages -D
+```
 
-Adicionar no vite.config.ts:
+2. Adicionar no `vite.config.ts`:
 
+```ts
 export default defineConfig({
   base: '/meu-checklist/',
 });
+```
 
-Editar package.json:
+3. Editar `package.json`:
 
+```json
 "scripts": {
   "deploy": "gh-pages -d dist",
   "build": "vite build"
 }
+```
 
-Gerar build e enviar:
+4. Gerar build e enviar:
 
+```bash
 npm run build
 npm run deploy
+```
 
-📂 Estrutura do Projeto
+---
 
+## 📂 Estrutura do Projeto
+
+```
 meu-checklist/
 │
 ├── src/
@@ -81,15 +98,18 @@ meu-checklist/
 ├── package.json
 ├── tsconfig.json
 └── vite.config.ts
+```
 
+---
 
-📄 Licença
+## 📄 Licença
 
 Este projeto é de uso livre para estudos e portfólio.
 
-👤 Autor
+---
 
-Feito por Raphael Salles, 2025.
+## 👤 Autor
+
+Feito por **Raphael Salles**, 2025.
 
 Se quiser melhorar, personalizar ou expandir, fique à vontade!
-
