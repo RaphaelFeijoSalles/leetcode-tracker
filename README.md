@@ -1,3 +1,5 @@
+---
+
 # 🚀 LeetCode Tracker
 
 Um checklist interativo e moderno para acompanhar o progresso de estudos em algoritmos e estruturas de dados (focado no Blind 75 / NeetCode 150).
@@ -5,53 +7,77 @@ Um checklist interativo e moderno para acompanhar o progresso de estudos em algo
 ![Status do Projeto](https://img.shields.io/badge/Status-Concluído-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+---
+
 ## ✨ Funcionalidades
 
-- **Acompanhamento Visual:** Barra de progresso dinâmica baseada na conclusão das tarefas.
-- **Persistência de Dados:** O progresso é salvo automaticamente no navegador (`localStorage`) usando Hooks personalizados.
-- **Dark/Light Mode:** Tema alternável com detecção automática da preferência do sistema.
-- **Organização Semanal:** Conteúdo dividido por tópicos e semanas (Arrays, Two Pointers, Graphs, etc.).
-- **Interface Responsiva:** Design fluido que funciona em Desktop e Mobile.
-- **UX Aprimorada:** Modal de confirmação personalizado para ações destrutivas (Reset).
+* **Acompanhamento Visual:** Barra de progresso dinâmica baseada na conclusão das tarefas.
+* **Persistência de Dados:** Progresso salvo automaticamente no navegador (`localStorage`) usando Hooks personalizados.
+* **Dark/Light Mode:** Tema alternável, com detecção automática da preferência do sistema.
+* **Organização Semanal:** Conteúdo dividido por tópicos e semanas (Arrays, Two Pointers, Graphs, etc.).
+* **Interface Responsiva:** Design fluido para Desktop e Mobile.
+* **UX Aprimorada:** Modal de confirmação para ações destrutivas (Reset).
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-Este projeto foi refatorado de HTML/JS puro para uma arquitetura moderna baseada em componentes:
+Projeto refatorado de HTML/JS puro para uma arquitetura moderna baseada em componentes:
 
-- **Core:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
-- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
-- **Estilização:** CSS3 Moderno (CSS Variables para temas)
-- **Deploy:** GitHub Pages (via GitHub Actions)
+* **Core:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+* **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+* **Estilização:** CSS moderno com variáveis para temas
+* **Deploy:** GitHub Pages (via GitHub Actions)
+
+---
 
 ## 📂 Arquitetura do Projeto
 
-A estrutura de arquivos foi organizada para garantir escalabilidade e fácil manutenção:
+```txt
+src/
+├── components/       # Componentes visuais (Checklist, Footer)
+├── data/             # Organização dos dados por semanas e tópicos
+├── hooks/            # Custom Hooks (ex: useStickyState)
+├── App.tsx           # Orquestrador da aplicação e temas
+└── index.css         # Variáveis globais e estilos responsivos
+```
 
-src/ ├── components/ # Componentes visuais (Checklist, Footer) ├── data/ # Separação dos dados (questões/semanas) da lógica visual ├── hooks/ # Custom Hooks (ex: useStickyState para persistência) ├── App.tsx # Orquestrador de layout e temas └── index.css # Variáveis globais e estilos responsivos
-
+---
 
 ## 🚀 Como executar localmente
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/RaphaelFeijoSalles/meu-checklist.git](https://github.com/RaphaelFeijoSalles/meu-checklist.git)
-Instale as dependências:
+### 1. Clone o repositório
 
-Bash
+```bash
+git clone https://github.com/RaphaelFeijoSalles/leetcode-tracker.git
+```
 
+### 2. Instale as dependências
+
+```bash
 cd meu-checklist
 npm install
-Inicie o servidor de desenvolvimento:
+```
 
-Bash
+### 3. Inicie o servidor de desenvolvimento
 
+```bash
 npm run dev
-📦 Deploy (GitHub Pages)
-O projeto está configurado para deploy automatizado via GitHub Actions.
+```
 
-Certifique-se de que a propriedade base no vite.config.ts corresponde ao nome do repositório.
+---
 
-O workflow de build é acionado a cada push na branch principal.
+## 📦 Deploy (GitHub Pages)
 
-📝 Autor
-Desenvolvido por Raphael Salles.
+Este projeto já está configurado para deploy automatizado via **GitHub Actions**.
+
+* Certifique-se de que a propriedade **`base`** no `vite.config.ts` corresponde ao nome do repositório.
+* O workflow realiza o build e deploy automaticamente a cada **push na branch `main`**.
+
+---
+
+## 📝 Autor
+
+Desenvolvido por **Raphael Salles**.
+
+---
